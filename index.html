@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-Br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>movimento de elemento</title>
 </head>
 <body>
-    <script>
-       let nome="Maria";
-       alert 
-    </script>
-    
+    <div id="dv1"></div>
+        <style>
+            #dv1 {
+                width: 100px;
+                height: 100px;
+                border: 1px solid #000;
+                background-color: #f00;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+
+            }
+        </style>
+        <script>
+            var dx;
+            var dy;
+            var px;
+            var py;
+            var obj;
+            var tmp;
+            var vel;
+
+            function iniciar(){
+                dx = 0;
+                dy = 0;
+                px = 0;
+                py = 0;
+                obj = document.getElementById("dv1");
+                document.addEventListener("kaydown", teclaDw);
+                document.addEventListener("keyup",teclaUp);
+                tmp = setInterval(etenterframe,20);
+                vel = 10;
+
+            }
+            
+        </script>
+
 </body>
 </html>
